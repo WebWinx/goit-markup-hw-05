@@ -162,7 +162,17 @@ header {
 .contact-item:not(:last-child) {
     margin-right: 50px;
 }
-
+.current::after {
+    content: '';
+    position: relative;
+    display: block;
+    left: 0;
+    bottom: -28px;
+    height: 4px;
+    width: 100%;
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
 .contact-link {
     color: var(--color-text-description);
     font-weight: 500;
@@ -170,6 +180,7 @@ header {
     line-height: 1.2;
     letter-spacing: 0.02em;
     display: block;
+    transition: color var(--animation-duration) var(--animation-timing-function);
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -179,6 +190,7 @@ header {
     margin-right: 10px;
     fill: currentColor;
     vertical-align: middle;
+    transition: fill var(--animation-duration) var(--animation-timing-function);
 }
 .header-icon-mail:hover,
 .header-icon-mail:focus {
@@ -188,6 +200,7 @@ header {
     margin-right: 10px;
     fill: currentColor;
     vertical-align: middle;
+    transition: fill var(--animation-duration) var(--animation-timing-function);
 }
 .header-icon-phone:hover,
 .header-icon-phone:focus {
@@ -478,6 +491,8 @@ header {
 }
 .types-image {
     display: block;
+    transition: box-shadow var(--animation-duration)
+        var(--animation-timing-function);
 }
 .types-item:not(:nth-last-child(-n + 3)) {
     margin-bottom: 30px;
@@ -486,6 +501,38 @@ header {
 .types-item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.types-link:hover .projects-overlay,
+.types-link:focus .projects-overlay {
+    transform: translateY(0%);
+}
+.types-link:hover,
+.types-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.projects-animation {
+    position: relative;
+    overflow: hidden;
+}
+.projects-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 63px 24px;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--text-color-on-dark);
+    background-color: var(--accent-color);
+    transform: translateY(100%);
+    transition: transform var(--animation-duration)
+        var(--animation-timing-function);
 }
 .item-description-field {
     padding: 20px 24px;
@@ -513,6 +560,7 @@ header {
     border-right: 1px solid var(--portfolio-border-color);
     border-bottom: 1px solid var(--portfolio-border-color);
 }
+
 /*our-cusromers*/
 .our-cusromers-header {
     margin-bottom: 50px;
