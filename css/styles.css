@@ -133,6 +133,7 @@ header {
     line-height: 1.2;
     letter-spacing: 0.02em;
     padding: 32px 0;
+    transition: color var(--animation-duration) var(--animation-timing-function);
 }
 .nav-item:not(:last-child) {
     margin-right: 50px;
@@ -147,6 +148,7 @@ header {
 }
 .current {
     color: var(--accent-color);
+    transition: color var(--animation-duration) var(--animation-timing-function);
 }
 .header-item:last-child {
     margin: 0;
@@ -357,10 +359,10 @@ header {
     letter-spacing: 0.03em;
     color: var(--title-text-color);
 }
-.our-activity-thumb {
+.activity-thumb {
     position: relative;
 }
-.our-activity-animation {
+.activity-animation {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -442,6 +444,9 @@ header {
     border-radius: 50%;
     fill: var(--social-link-color);
     justify-content: center;
+    transition: fill var(--animation-duration) var(--animation-timing-function),
+        background-color var(--animation-duration)
+            var(--animation-timing-function);
 }
 .specialist-icon-back:hover,
 .specialist-icon-back:focus {
@@ -496,11 +501,6 @@ header {
 }
 .types-item:not(:nth-last-child(-n + 3)) {
     margin-bottom: 30px;
-}
-.types-item:hover,
-.types-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .types-link:hover .projects-overlay,
 .types-link:focus .projects-overlay {
@@ -587,6 +587,8 @@ header {
     border: 1px solid var(--social-link-color);
     border-radius: 4px;
     padding: 16px 0;
+    transition: fill var(--animation-duration) var(--animation-timing-function),
+        border var(--animation-duration) var(--animation-timing-function);
 }
 .our-cusromers-link:hover,
 .our-cusromers-link:focus {
@@ -626,6 +628,7 @@ address {
 }
 .address-link {
     color: var(--bg-color-team);
+    transition: color var(--animation-duration) var(--animation-timing-function);
 }
 .footer-list-text {
     margin-bottom: 20px;
@@ -647,7 +650,9 @@ address {
     justify-content: center;
     align-items: center;
 }
-
+.footer-icon {
+    transition: fill var(--animation-duration) var(--animation-timing-function);
+}
 .footer-icon:hover,
 .footer-icon:focus {
     fill: var(--bg-color-team);
@@ -661,6 +666,8 @@ address {
     fill: var(--text-color-on-dark);
     border-radius: 50%;
     background-color: var(--footer-social);
+    transition: background-color var(--animation-duration)
+        var(--animation-timing-function);
 }
 .footer-icons-links:hover,
 .footer-icons-links:focus {
