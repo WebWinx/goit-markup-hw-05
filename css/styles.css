@@ -530,7 +530,7 @@ header {
     letter-spacing: 0.03em;
     color: var(--text-color-on-dark);
     background-color: var(--accent-color);
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform var(--animation-duration)
         var(--animation-timing-function);
 }
