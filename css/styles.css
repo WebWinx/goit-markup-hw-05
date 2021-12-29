@@ -434,11 +434,11 @@ header {
     display: inline-flex;
     align-content: center;
 }
-.specialist-social-links {
+.social-links {
     width: 44px;
     height: 44px;
 }
-.specialist-social-links:not(:last-child) {
+.social-links:not(:last-child) {
     margin-right: 10px;
 }
 
@@ -459,7 +459,7 @@ header {
     fill: var(--text-color-on-dark);
     background-color: var(--accent-color);
 }
-..specialist-social-links:not(:last-child) {
+.social-links:not(:last-child) {
     margin-right: 10px;
 }
 
@@ -674,7 +674,7 @@ address {
 .footer-icon:focus {
     fill: var(--bg-color-team);
 }
-.footer-icons-links {
+.dark.social-links {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -686,7 +686,7 @@ address {
     transition: background-color var(--animation-duration)
         var(--animation-timing-function);
 }
-.footer-icons-links:hover,
-.footer-icons-links:focus {
+.dark:hover,
+.dark:focus {
     background-color: var(--accent-color);
 }
